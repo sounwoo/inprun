@@ -1,0 +1,20 @@
+###
+POST http://127.0.0.1:3000/boards
+Content-Type: application/json
+
+{
+  "title" : "Board 1",
+  "description" : "description 1"
+}
+
+###
+GET http://127.0.0.1:3000/boards/1
+
+
+###
+PATCH http://127.0.0.1:3000/boards/4aad1800-008d-11ed-8f38-c7202bb343c0/status
+Content-Type: application/json
+
+{
+  "status": "PRIVATE"
+}
