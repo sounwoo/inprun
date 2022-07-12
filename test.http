@@ -1,20 +1,44 @@
 ###
 POST http://127.0.0.1:3000/boards
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXIyIiwiaWF0IjoxNjU3NjU0NzUwLCJleHAiOjE2NTc4NzA3NTB9.qxXFYBHAst4jaqX2tH9k9UBYrlW0Rm76SFGEwVDzNq8
 Content-Type: application/json
 
 {
-  "title" : "Board 1",
-  "description" : "description 1"
+  "title" : "board 6",
+  "description" : "new description"
 }
 
 ###
-GET http://127.0.0.1:3000/boards/1
-
+GET http://127.0.0.1:3000/boards
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXIyIiwiaWF0IjoxNjU3NjU0NzUwLCJleHAiOjE2NTc4NzA3NTB9.qxXFYBHAst4jaqX2tH9k9UBYrlW0Rm76SFGEwVDzNq8
 
 ###
-PATCH http://127.0.0.1:3000/boards/4aad1800-008d-11ed-8f38-c7202bb343c0/status
+DELETE http://127.0.0.1:3000/boards/4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXIzIiwiaWF0IjoxNjU3NjU1NDAwLCJleHAiOjE2NTc4NzE0MDB9.ywfqeMv3Ek_Yu723ue6f83pDGlIgPDjYcEBVgPNKg-M
+
+###
+PATCH http://127.0.0.1:3000/boards/1/status
 Content-Type: application/json
 
 {
   "status": "PRIVATE"
+}
+
+###
+POST http://127.0.0.1:3000/auth/signin
+Content-Type: application/json
+
+{
+  "username" : "user3",
+  "password" : "1234"
+}
+
+###
+POST http://127.0.0.1:3000/auth/test
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IuqzteuwseyehOuLpDE0MyIsImlhdCI6MTY1NzY1MzUxMCwiZXhwIjoxNjU3ODY5NTEwfQ.1QP3DgU2FUNj3OA43V-HCdJQxAdXYI2Q-yLO72zLyi4
+Content-Type: application/json
+
+{
+  "username" : "공백임다143",
+  "password" : "1234"
 }
